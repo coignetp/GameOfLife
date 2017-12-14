@@ -25,4 +25,11 @@ class RuleConway(Rule):
 				for n in neigh:
 					s += getState(n, board)
 
+				if s == 3:
+					newBoard[i][j] = 1
+				elif s == 2 and board[i][j] == 1:
+					newBoard[i][j] = 1
+				else:
+					newBoard[i][j] = 0
+
 		return newBoard
